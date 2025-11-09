@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dash Humanizer Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="options-container">
+    <h1>Dash Humanizer Settings</h1>
+    
+    <div class="setting">
+      <label>
+        <input type="checkbox" id="auto-selection">
+        Auto-humanize on selection
+      </label>
+      <p class="description">Show bubble when you select text</p>
+    </div>
+    
+    <div class="setting">
+      <label>
+        <input type="checkbox" id="auto-type">
+        Auto-humanize as I type/paste
+      </label>
+      <p class="description">Transform dashes automatically while typing</p>
+    </div>
+    
+    <div class="setting">
+      <label>
+        <input type="checkbox" id="convert-en-dashes">
+        Also convert en dashes to … when used as breaks
+      </label>
+      <p class="description">Transform both em-dashes (—) and en-dashes (–)</p>
+    </div>
+    
+    <div class="privacy-notice">
+      <p>🔒 All processing is local; no data leaves your browser.</p>
+    </div>
+    
+    <div class="save-status" id="save-status"></div>
+  </div>
+  <script src="../settings.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

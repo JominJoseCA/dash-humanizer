@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dash Humanizer - Help & Documentation</title>
+  <link rel="stylesheet" href="help.css">
+</head>
+<body>
+  <div class="help-container">
+    <header>
+      <h1>Dash Humanizer Help</h1>
+      <p class="subtitle">Transform dashes into ellipsis for more natural writing</p>
+    </header>
+
+    <nav class="table-of-contents">
+      <h2>Contents</h2>
+      <ul>
+        <li><a href="#getting-started">Getting Started</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#usage-examples">Usage Examples</a></li>
+        <li><a href="#keyboard-shortcuts">Keyboard Shortcuts</a></li>
+        <li><a href="#settings">Settings</a></li>
+        <li><a href="#supported-apps">Supported Applications</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#privacy">Privacy & Security</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Getting Started -->
+      <section id="getting-started">
+        <h2>Getting Started</h2>
+        <p>Dash Humanizer automatically transforms em-dashes (—) and optionally en-dashes (–) into ellipsis (…) with proper spacing, making your writing feel more natural and conversational.</p>
+        
+        <div class="quick-start">
+          <h3>Quick Start</h3>
+          <ol>
+            <li>Install the extension from the Chrome Web Store or load it unpacked</li>
+            <li>Click the extension icon in your toolbar to verify it's enabled (should show "ON")</li>
+            <li>Select any text containing dashes on a webpage</li>
+            <li>A bubble will appear showing the humanized version</li>
+            <li>Click "Copy" or "Replace Selection" to use the transformed text</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features">
+        <h2>Features</h2>
+        
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>🎯 Smart Selection Bubble</h3>
+            <p>Select text and instantly see a preview of the humanized version. Copy or replace with one click.</p>
+          </div>
+          
+          <div class="feature-card">
+            <h3>⚡ Live Typing Transformation</h3>
+            <p>Enable auto-transformation as you type or paste content in editable fields.</p>
+          </div>
+          
+          <div class="feature-card">
+            <h3>🖱️ Context Menu Integration</h3>
+            <p>Right-click selected text and choose "Humanize dashes" for quick transformation.</p>
+          </div>
+          
+          <div class="feature-card">
+            <h3>🧠 Intelligent Detection</h3>
+            <p>Preserves numeric ranges (2019–2023), URLs, code blocks, and minus signs (-5).</p>
+          </div>
+          
+          <div class="feature-card">
+            <h3>⌨️ Keyboard Accessible</h3>
+            <p>Full keyboard navigation support with Tab, Enter, and Escape keys.</p>
+          </div>
+          
+          <div class="feature-card">
+            <h3>🔒 Privacy First</h3>
+            <p>All processing happens locally in your browser. Zero network requests.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Usage Examples -->
+      <section id="usage-examples">
+        <h2>Usage Examples</h2>
+        
+        <div class="example">
+          <h3>Example 1: Selection Bubble</h3>
+          <div class="example-steps">
+            <div class="step">
+              <span class="step-number">1</span>
+              <p>Select text containing dashes on any webpage</p>
+            </div>
+            <div class="step">
+              <span class="step-number">2</span>
+              <p>The selection bubble appears showing original and humanized versions</p>
+            </div>
+            <div class="step">
+              <span class="step-number">3</span>
+              <p>Click "Copy" to copy the humanized text or "Replace Selection" to update it in place</p>
+            </div>
+          </div>
+          
+          <div class="example-visual">
+            <div class="before-after">
+              <div class="before">
+                <strong>Before:</strong>
+                <p>"I went to the store—without my wallet—and had to come back."</p>
+              </div>
+              <div class="arrow">→</div>
+              <div class="after">
+                <strong>After:</strong>
+                <p>"I went to the store … without my wallet … and had to come back."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <h3>Example 2: Context Menu</h3>
+          <div class="example-steps">
+            <div class="step">
+              <span class="step-number">1</span>
+              <p>Select text with dashes</p>
+            </div>
+            <div class="step">
+              <span class="step-number">2</span>
+              <p>Right-click and choose "Humanize dashes"</p>
+            </div>
+            <div class="step">
+              <span class="step-number">3</span>
+              <p>Text is replaced instantly (in editable fields) or shown in a modal (read-only content)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <h3>Example 3: Live Typing</h3>
+          <div class="example-steps">
+            <div class="step">
+              <span class="step-number">1</span>
+              <p>Enable "Auto-humanize as I type/paste" in settings</p>
+            </div>
+            <div class="step">
+              <span class="step-number">2</span>
+              <p>Type or paste text with dashes in Gmail, LinkedIn, or any editable field</p>
+            </div>
+            <div class="step">
+              <span class="step-number">3</span>
+              <p>Dashes are automatically transformed to ellipsis as you type</p>
+            </div>
+          </div>
+          
+          <div class="example-visual">
+            <div class="typing-demo">
+              <p><strong>You type:</strong> "She said—and I quote—"</p>
+              <p><strong>Automatically becomes:</strong> "She said … and I quote … "</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <h3>Example 4: Smart Preservation</h3>
+          <p>The extension intelligently preserves dashes that aren't clause breaks:</p>
+          
+          <div class="preservation-examples">
+            <div class="preserve-item">
+              <span class="preserve-label">Numeric Ranges:</span>
+              <code>"Years 2019–2023" → "Years 2019–2023"</code>
+              <span class="preserve-note">✓ Preserved</span>
+            </div>
+            <div class="preserve-item">
+              <span class="preserve-label">URLs:</span>
+              <code>"https://example.com/my-page" → "https://example.com/my-page"</code>
+              <span class="preserve-note">✓ Preserved</span>
+            </div>
+            <div class="preserve-item">
+              <span class="preserve-label">Minus Signs:</span>
+              <code>"Temperature: -5°C" → "Temperature: -5°C"</code>
+              <span class="preserve-note">✓ Preserved</span>
+            </div>
+            <div class="preserve-item">
+              <span class="preserve-label">Code Blocks:</span>
+              <code>&lt;code&gt;const x = y—z;&lt;/code&gt; → &lt;code&gt;const x = y—z;&lt;/code&gt;</code>
+              <span class="preserve-note">✓ Preserved</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Keyboard Shortcuts -->
+      <section id="keyboard-shortcuts">
+        <h2>Keyboard Shortcuts</h2>
+        <p>Navigate and control the extension using your keyboard for faster workflow.</p>
+        
+        <div class="shortcuts-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Action</th>
+                <th>Shortcut</th>
+                <th>Context</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Navigate to Copy button</td>
+                <td><kbd>Tab</kbd></td>
+                <td>When selection bubble is visible</td>
+              </tr>
+              <tr>
+                <td>Navigate to Replace button</td>
+                <td><kbd>Tab</kbd> (again)</td>
+                <td>When selection bubble is visible</td>
+              </tr>
+              <tr>
+                <td>Activate focused button</td>
+                <td><kbd>Enter</kbd></td>
+                <td>When button is focused</td>
+              </tr>
+              <tr>
+                <td>Close selection bubble</td>
+                <td><kbd>Esc</kbd></td>
+                <td>When selection bubble is visible</td>
+              </tr>
+              <tr>
+                <td>Close modal dialog</td>
+                <td><kbd>Esc</kbd></td>
+                <td>When modal is open</td>
+              </tr>
+              <tr>
+                <td>Navigate within modal</td>
+                <td><kbd>Tab</kbd></td>
+                <td>When modal is open</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="keyboard-tips">
+          <h3>Keyboard Navigation Tips</h3>
+          <ul>
+            <li>Focus is trapped within the bubble or modal when open</li>
+            <li>All interactive elements have visible focus indicators</li>
+            <li>Screen readers announce all actions and state changes</li>
+            <li>Use <kbd>Shift</kbd> + <kbd>Tab</kbd> to navigate backwards</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Settings -->
+      <section id="settings">
+        <h2>Settings</h2>
+        <p>Customize the extension behavior to match your workflow. Access settings by clicking the extension icon and selecting "Settings".</p>
+        
+        <div class="settings-list">
+          <div class="setting-item">
+            <h3>Master Toggle (Action Popup)</h3>
+            <p><strong>Location:</strong> Click extension icon in toolbar</p>
+            <p><strong>Purpose:</strong> Quickly enable or disable the entire extension</p>
+            <p><strong>Default:</strong> ON</p>
+          </div>
+          
+          <div class="setting-item">
+            <h3>Auto-humanize on selection</h3>
+            <p><strong>What it does:</strong> Shows the selection bubble when you select text containing dashes</p>
+            <p><strong>When to disable:</strong> If you find the bubble distracting or only want to use the context menu</p>
+            <p><strong>Default:</strong> Enabled</p>
+          </div>
+          
+          <div class="setting-item">
+            <h3>Auto-humanize as I type/paste</h3>
+            <p><strong>What it does:</strong> Automatically transforms dashes to ellipsis as you type or paste in editable fields</p>
+            <p><strong>When to disable:</strong> If you want manual control over transformations</p>
+            <p><strong>Default:</strong> Enabled</p>
+            <p><strong>Note:</strong> Works in Gmail, LinkedIn, Twitter, Notion, Google Docs, and standard text fields</p>
+          </div>
+          
+          <div class="setting-item">
+            <h3>Also convert en dashes to … when used as breaks</h3>
+            <p><strong>What it does:</strong> Transforms both em-dashes (—) and en-dashes (–) when used as clause breaks</p>
+            <p><strong>When to enable:</strong> If you use en-dashes for clause breaks and want them transformed too</p>
+            <p><strong>Default:</strong> Disabled</p>
+            <p><strong>Note:</strong> Numeric ranges like "2019–2023" are always preserved regardless of this setting</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Supported Applications -->
+      <section id="supported-apps">
+        <h2>Supported Applications</h2>
+        <p>Dash Humanizer has been tested and optimized for these popular web applications:</p>
+        
+        <div class="apps-grid">
+          <div class="app-card">
+            <h3>✉️ Gmail</h3>
+            <p>Full support in compose window, including rich text formatting</p>
+            <ul>
+              <li>Selection bubble</li>
+              <li>Context menu</li>
+              <li>Live typing</li>
+              <li>Paste transformation</li>
+            </ul>
+          </div>
+          
+          <div class="app-card">
+            <h3>💼 LinkedIn</h3>
+            <p>Works in post composer, comments, and messages</p>
+            <ul>
+              <li>Selection bubble</li>
+              <li>Context menu</li>
+              <li>Live typing</li>
+              <li>Paste transformation</li>
+            </ul>
+          </div>
+          
+          <div class="app-card">
+            <h3>🐦 Twitter / X</h3>
+            <p>Full support in tweet composer and replies</p>
+            <ul>
+              <li>Selection bubble</li>
+              <li>Context menu</li>
+              <li>Live typing</li>
+              <li>Character count updates correctly</li>
+            </ul>
+          </div>
+          
+          <div class="app-card">
+            <h3>📝 Notion</h3>
+            <p>Works across all block types (paragraphs, headings, lists)</p>
+            <ul>
+              <li>Selection bubble</li>
+              <li>Context menu</li>
+              <li>Live typing</li>
+              <li>Formatting preserved</li>
+            </ul>
+          </div>
+          
+          <div class="app-card">
+            <h3>📄 Google Docs</h3>
+            <p>Full support in document body</p>
+            <ul>
+              <li>Selection bubble</li>
+              <li>Context menu</li>
+              <li>Live typing</li>
+              <li>Undo/redo works correctly</li>
+            </ul>
+          </div>
+          
+          <div class="app-card">
+            <h3>🌐 Any Website</h3>
+            <p>Works on standard HTML elements everywhere</p>
+            <ul>
+              <li>Textarea elements</li>
+              <li>Input fields</li>
+              <li>ContentEditable elements</li>
+              <li>Read-only text (copy only)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>Why use ellipsis instead of em-dashes?</h3>
+            <p>Ellipsis (…) creates a more conversational, natural tone in writing. Em-dashes can feel formal or abrupt, while ellipsis suggests a pause or trailing thought that feels more human and relatable.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>Will this break my numeric ranges like "2019–2023"?</h3>
+            <p>No! The extension intelligently detects numeric ranges and preserves them. It only transforms dashes used as clause breaks in sentences.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>Does this work in Google Docs?</h3>
+            <p>Yes! The extension fully supports Google Docs, including live typing transformation and proper undo/redo functionality.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>Is my data being sent anywhere?</h3>
+            <p>Absolutely not. All text processing happens locally in your browser. The extension makes zero network requests and collects no data. Your privacy is guaranteed.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>Can I disable the automatic bubble?</h3>
+            <p>Yes! Go to Settings and uncheck "Auto-humanize on selection". You can still use the context menu (right-click) to transform text manually.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>Why isn't live typing working?</h3>
+            <p>Make sure "Auto-humanize as I type/paste" is enabled in Settings. Also verify the extension is enabled (click the icon to check). If it still doesn't work, try refreshing the page.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>What's the difference between em-dash and en-dash?</h3>
+            <p>Em-dash (—) is longer and typically used for clause breaks. En-dash (–) is shorter and typically used for ranges. By default, the extension only transforms em-dashes, but you can enable en-dash transformation in Settings.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>Can I use this on mobile?</h3>
+            <p>Currently, this is a Chrome desktop extension. Mobile browser extensions have limited support, but we may explore mobile options in the future.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>Will this work in code editors or terminals?</h3>
+            <p>The extension automatically skips transformation in code blocks (&lt;pre&gt;, &lt;code&gt; tags) to preserve your code. However, it may not detect all specialized code editors. You can disable the extension temporarily if needed.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>How do I type an actual em-dash if I want one?</h3>
+            <p>If you have live typing enabled and want to keep an em-dash, you can:
+              <ul>
+                <li>Disable "Auto-humanize as I type/paste" in Settings</li>
+                <li>Use the extension's toggle to temporarily disable it</li>
+                <li>Type the dash and immediately undo (Ctrl+Z / Cmd+Z)</li>
+              </ul>
+            </p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>Does this sync across my devices?</h3>
+            <p>Yes! Your settings are synced across all Chrome browsers where you're signed in, thanks to Chrome's sync storage.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>What permissions does this extension need?</h3>
+            <p>The extension requires:
+              <ul>
+                <li><strong>contextMenus:</strong> For the right-click "Humanize dashes" option</li>
+                <li><strong>storage:</strong> To save your settings</li>
+                <li><strong>activeTab:</strong> To access and modify text on the current page</li>
+                <li><strong>&lt;all_urls&gt;:</strong> To work on any website you visit</li>
+              </ul>
+              All permissions are necessary for core functionality. See the <a href="#privacy">Privacy & Security</a> section for details.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Privacy & Security -->
+      <section id="privacy">
+        <h2>Privacy & Security</h2>
+        
+        <div class="privacy-guarantee">
+          <h3>🔒 Our Privacy Guarantee</h3>
+          <p class="highlight">All text processing happens locally in your browser. Zero network requests. Zero data collection. Your text never leaves your device.</p>
+        </div>
+        
+        <div class="privacy-details">
+          <h3>What We Do</h3>
+          <ul>
+            <li>Process all text transformations locally in your browser</li>
+            <li>Store only your settings preferences (enabled/disabled states)</li>
+            <li>Use Chrome's encrypted sync storage for settings</li>
+            <li>Follow security best practices (XSS prevention, CSP, minimal permissions)</li>
+          </ul>
+          
+          <h3>What We Don't Do</h3>
+          <ul>
+            <li>Make any network requests</li>
+            <li>Collect or transmit any user data</li>
+            <li>Include analytics or tracking code</li>
+            <li>Store or log your text content</li>
+            <li>Share data with third parties (there's no data to share!)</li>
+          </ul>
+          
+          <h3>Security Measures</h3>
+          <ul>
+            <li><strong>XSS Prevention:</strong> All user input is sanitized before display</li>
+            <li><strong>Content Security Policy:</strong> Strict CSP prevents malicious code injection</li>
+            <li><strong>Minimal Permissions:</strong> Only requests permissions essential for functionality</li>
+            <li><strong>Shadow DOM Isolation:</strong> UI components are isolated from page styles and scripts</li>
+            <li><strong>No External Resources:</strong> All code runs locally, no CDN dependencies</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Troubleshooting -->
+      <section id="troubleshooting">
+        <h2>Troubleshooting</h2>
+        
+        <div class="troubleshooting-list">
+          <div class="trouble-item">
+            <h3>Selection bubble doesn't appear</h3>
+            <p><strong>Possible causes:</strong></p>
+            <ul>
+              <li>Extension is disabled - Click the icon and check if it shows "OFF"</li>
+              <li>"Auto-humanize on selection" is disabled in Settings</li>
+              <li>Selected text doesn't contain any dashes</li>
+              <li>Page hasn't fully loaded - Wait a moment and try again</li>
+            </ul>
+            <p><strong>Solution:</strong> Enable the extension and the setting, then try selecting text with dashes again.</p>
+          </div>
+          
+          <div class="trouble-item">
+            <h3>Live typing isn't working</h3>
+            <p><strong>Possible causes:</strong></p>
+            <ul>
+              <li>"Auto-humanize as I type/paste" is disabled in Settings</li>
+              <li>Extension was installed after the page loaded</li>
+              <li>The field is in an iframe with cross-origin restrictions</li>
+            </ul>
+            <p><strong>Solution:</strong> Enable the setting and refresh the page. If still not working, try disabling and re-enabling the extension.</p>
+          </div>
+          
+          <div class="trouble-item">
+            <h3>"Replace Selection" button doesn't work</h3>
+            <p><strong>Possible causes:</strong></p>
+            <ul>
+              <li>Text is in a read-only field (use "Copy" instead)</li>
+              <li>Complex rich text editor that the extension can't modify</li>
+              <li>Cross-origin iframe restrictions</li>
+            </ul>
+            <p><strong>Solution:</strong> Use the "Copy" button and paste manually, or use the context menu instead.</p>
+          </div>
+          
+          <div class="trouble-item">
+            <h3>Clipboard copy fails</h3>
+            <p><strong>Possible causes:</strong></p>
+            <ul>
+              <li>Browser denied clipboard permission</li>
+              <li>Page security policy blocks clipboard access</li>
+            </ul>
+            <p><strong>Solution:</strong> Grant clipboard permission when prompted. If that doesn't work, the extension will show a modal where you can manually copy the text.</p>
+          </div>
+          
+          <div class="trouble-item">
+            <h3>Extension slows down typing</h3>
+            <p><strong>Possible causes:</strong></p>
+            <ul>
+              <li>Very large text field (50,000+ characters)</li>
+              <li>Other extensions conflicting</li>
+              <li>Browser performance issues</li>
+            </ul>
+            <p><strong>Solution:</strong> Disable "Auto-humanize as I type/paste" for large documents. Use the selection bubble or context menu instead.</p>
+          </div>
+          
+          <div class="trouble-item">
+            <h3>Settings don't save</h3>
+            <p><strong>Possible causes:</strong></p>
+            <ul>
+              <li>Chrome sync is disabled</li>
+              <li>Storage quota exceeded (very rare)</li>
+            </ul>
+            <p><strong>Solution:</strong> Check Chrome sync settings. Try disabling and re-enabling the extension.</p>
+          </div>
+          
+          <div class="trouble-item">
+            <h3>Extension doesn't work on a specific site</h3>
+            <p><strong>Possible causes:</strong></p>
+            <ul>
+              <li>Site uses a complex custom editor</li>
+              <li>Site has strict Content Security Policy</li>
+              <li>Site loads content dynamically after page load</li>
+            </ul>
+            <p><strong>Solution:</strong> Try refreshing the page. If it still doesn't work, use the copy/paste workflow instead of live typing.</p>
+          </div>
+        </div>
+        
+        <div class="support-box">
+          <h3>Still Having Issues?</h3>
+          <p>If you're experiencing problems not covered here:</p>
+          <ol>
+            <li>Check the browser console for error messages (F12 → Console tab)</li>
+            <li>Try disabling other extensions to check for conflicts</li>
+            <li>Uninstall and reinstall the extension</li>
+            <li>Make sure you're using the latest version of Chrome</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Dash Humanizer v1.0.0 | <a href="#privacy">Privacy Policy</a> | Made with care for better writing</p>
+    </footer>
+  </div>
+</body>
+</html>
