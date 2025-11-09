@@ -14,9 +14,9 @@ A Chrome extension that transforms em-dashes and en-dashes used as clause breaks
 
 ## Installation
 
-### Option 1: Install Pre-built Package (Recommended)
+### Install Pre-built Package (Recommended)
 
-1. Download the latest `dash-humanizer-v1.0.0.zip` file
+1. Download the `dist.zip` file
 2. Extract the ZIP file to a folder on your computer
 3. Open Google Chrome and navigate to `chrome://extensions/`
 4. Enable **Developer mode** by toggling the switch in the top right corner
@@ -24,37 +24,6 @@ A Chrome extension that transforms em-dashes and en-dashes used as clause breaks
 6. Select the extracted folder (containing `manifest.json`)
 7. The Dash Humanizer icon should now appear in your Chrome toolbar
 
-### Option 2: Build from Source
-
-If you want to build the extension yourself:
-
-1. Clone or download this repository
-2. Install Node.js (if not already installed)
-3. Open a terminal in the project directory
-4. Run the build command:
-   ```bash
-   npm run build
-   ```
-5. The built extension will be in the `dist/` folder
-6. Follow steps 3-7 from Option 1, selecting the `dist/` folder
-
-### Option 3: Development Mode
-
-For development and testing:
-
-1. Clone or download this repository
-2. Open Google Chrome and navigate to `chrome://extensions/`
-3. Enable **Developer mode** by toggling the switch in the top right corner
-4. Click the **Load unpacked** button
-5. Select the project root folder (where `manifest.json` is located)
-6. The Dash Humanizer icon should now appear in your Chrome toolbar
-
-### Verify Installation
-
-After installation, you should see the Dash Humanizer icon in your browser toolbar. Click it to:
-- Toggle the extension on/off
-- Access settings
-- View help documentation (opens [help.html](help.html) with comprehensive usage guide)
 
 ## Documentation
 
@@ -94,14 +63,6 @@ Click the extension icon and select "Settings" to configure:
 - **Only stores your preference settings locally** - Settings are stored using Chrome's secure storage API
 - **Open source** - All code is available for inspection and audit
 
-**Security Features:**
-- Content Security Policy (CSP) prevents code injection attacks
-- No use of `eval()` or inline scripts
-- All user input is sanitized before display
-- Minimal permissions requested (only what's necessary for functionality)
-- Regular security audits performed
-
-See [SECURITY_AUDIT.md](SECURITY_AUDIT.md) for the complete security audit report.
 
 ## Permissions
 
@@ -122,8 +83,6 @@ The extension requires the following permissions:
 - **High Contrast Mode**: Enhanced visibility in high contrast mode
 - **WCAG 2.1 AA Compliant**: Meets all Level AA accessibility standards
 
-See [ACCESSIBILITY_AUDIT.md](ACCESSIBILITY_AUDIT.md) for the complete accessibility audit report.
-
 ### Keyboard Shortcuts
 
 - **Tab**: Navigate between buttons in bubble/modal
@@ -131,11 +90,6 @@ See [ACCESSIBILITY_AUDIT.md](ACCESSIBILITY_AUDIT.md) for the complete accessibil
 - **Enter** or **Space**: Activate focused button
 - **Escape**: Close bubble or modal dialog
 
-### Screen Reader Testing
-
-For detailed screen reader testing instructions:
-- Full guide: [screen-reader-testing-guide.md](screen-reader-testing-guide.md)
-- Quick test: [screen-reader-quick-test.md](screen-reader-quick-test.md)
 
 ## Supported Applications
 
@@ -178,145 +132,10 @@ The extension provides three interaction methods:
 
 - **Manifest Version**: 3 (latest Chrome extension standard)
 - **Architecture**: Service worker + content scripts
-- **Performance**: 
-  - Transformation: 0.82ms average for 10,000 characters (60x faster than requirement)
-  - Large text: 3.81ms for 50,000 characters (131x faster than requirement)
-  - Typing lag: < 1ms per keystroke
-  - Bubble render: < 10ms (smooth 60fps)
-- **Memory**: < 5MB when idle
-- **CPU Usage**: < 1% while scrolling
 
-See [PERFORMANCE_TESTING.md](PERFORMANCE_TESTING.md) for detailed benchmarks.
-
-## Troubleshooting
-
-### Extension not working on a specific site
-
-**Symptoms**: Selection bubble doesn't appear, context menu missing, or transformations don't work
-
-**Solutions**:
-1. Refresh the page after installing the extension (Ctrl+R or Cmd+R)
-2. Check that the extension is enabled (click the icon to verify it shows "ON")
-3. Verify the site allows extensions - some sites with strict Content Security Policies may limit functionality
-4. Try disabling other extensions that might conflict
-5. Check the browser console (F12) for any error messages
-
-### Selection bubble not appearing
-
-**Symptoms**: Text selection doesn't show the transformation bubble
-
-**Solutions**:
-1. Check that "Auto-humanize on selection" is enabled in settings
-2. Ensure you're selecting text that contains dashes (—, –, or -)
-3. Try selecting text in a different area of the page
-4. Verify the extension is enabled (not in "OFF" state)
-
-### Clipboard access denied
-
-**Symptoms**: Error message when clicking "Copy" button
-
-**Solutions**:
-1. Check Chrome's site permissions for clipboard access (click the lock icon in address bar)
-2. Grant clipboard permission when prompted
-3. Use the "Replace Selection" button instead of "Copy" when in editable fields
-4. Try copying manually (Ctrl+C) after the transformation
-
-### Settings not saving
-
-**Symptoms**: Settings revert after closing options page or restarting browser
-
-**Solutions**:
-1. Ensure you're signed into Chrome (for sync storage across devices)
-2. Check that Chrome sync is enabled in Chrome settings (chrome://settings/syncSetup)
-3. Settings will automatically fall back to local storage if sync is unavailable
-4. Try toggling the setting off and on again
-5. Check browser console for storage quota errors
-
-### Live typing not working
-
-**Symptoms**: Dashes aren't automatically transformed while typing
-
-**Solutions**:
-1. Verify "Auto-humanize as I type/paste" is enabled in settings
-2. Ensure you're typing in an editable field (textarea, input, or contentEditable)
-3. Try typing a dash followed by a space to trigger transformation
-4. Some rich text editors may not support live transformation - use selection bubble or context menu instead
-5. Refresh the page and try again
-
-### Extension slowing down browser
-
-**Symptoms**: Browser feels sluggish or typing has lag
-
-**Solutions**:
-1. Disable "Auto-humanize as I type/paste" if you don't need it
-2. Check CPU usage in Chrome Task Manager (Shift+Esc)
-3. The extension should use < 1% CPU - if higher, try reloading the extension
-4. Report the issue with details about the website and text length
-
-### Context menu item not appearing
-
-**Symptoms**: Right-click menu doesn't show "Humanize dashes"
-
-**Solutions**:
-1. Ensure you have text selected before right-clicking
-2. Verify the extension is enabled
-3. Try reloading the extension in chrome://extensions/
-4. Check that no other extension is overriding the context menu
-
-### Works in some apps but not others
-
-**Symptoms**: Extension works in Gmail but not in another application
-
-**Solutions**:
-1. Some applications use custom editors that may require special handling
-2. Try using the context menu instead of the selection bubble
-3. As a workaround, copy text to a plain textarea, transform it, then copy back
-4. Report the specific application for potential future support
-
-### Extension not loading after installation
-
-**Symptoms**: Extension icon doesn't appear in toolbar, or shows errors in chrome://extensions/
-
-**Solutions**:
-1. Verify you selected the correct folder (containing manifest.json)
-2. Check for error messages in chrome://extensions/ and expand the extension details
-3. Ensure you're using Chrome version 88 or higher (Manifest V3 requirement)
-4. Try removing and re-adding the extension
-5. If using the built version, ensure the build completed successfully
-
-### Getting "Manifest version 2 is deprecated" warning
-
-**Solution**: This extension uses Manifest V3 (the latest version). If you see this warning, you may have loaded the wrong folder or an old version.
-
-### Still having issues?
-
-If none of the above solutions work:
-1. Check the browser console (F12) for error messages
-2. Try disabling all other extensions to rule out conflicts
-3. Test in an Incognito window (enable the extension for Incognito in chrome://extensions/)
-4. Verify you're using the latest version of Chrome
-5. Try uninstalling and reinstalling the extension
 
 ## Development
 
-### Building the Extension
-
-The extension includes build scripts to minify and optimize all files:
-
-```bash
-# Build the extension (creates dist/ folder)
-npm run build
-
-# Create a ZIP package for distribution
-npm run package
-```
-
-The build process:
-- Minifies all JavaScript files (43% size reduction)
-- Optimizes CSS files
-- Copies all necessary assets (HTML, icons, manifest)
-- Creates a production-ready `dist/` folder
-- Generates a `dash-humanizer-v1.0.0.zip` package
 
 ### Project Structure
 
@@ -454,75 +273,3 @@ Try these examples in any test page:
 - Some websites with strict Content Security Policies may limit functionality
 - Extension must be reloaded after code changes during development
 
-## Frequently Asked Questions
-
-### Why use ellipsis instead of em-dashes?
-
-Em-dashes (—) are often used in formal writing to indicate breaks or parenthetical thoughts. Ellipsis (…) creates a more conversational, natural tone that many writers prefer for modern communication, especially in emails and social media.
-
-### Will this break my numeric ranges like "2019–2023"?
-
-No! The extension is smart enough to detect numeric ranges and preserve them. It only transforms dashes used as clause breaks in sentences.
-
-### Does it work offline?
-
-Yes! All processing happens locally in your browser. No internet connection is required for the extension to work.
-
-### Can I use this on mobile?
-
-Currently, this extension is designed for desktop Chrome browsers. Mobile Chrome doesn't support extensions in the same way.
-
-### Will it slow down my browser?
-
-No. The extension is highly optimized and uses less than 1% CPU and 5MB of memory. Transformations happen in milliseconds.
-
-### Can I disable it temporarily?
-
-Yes! Click the extension icon and toggle it off. You can re-enable it anytime without losing your settings.
-
-### Does it support other languages?
-
-The extension works with any language that uses em-dashes or en-dashes. The transformation logic is language-agnostic.
-
-### What's the difference between em-dash and en-dash?
-
-- **Em-dash (—)**: Longer dash, typically used for clause breaks
-- **En-dash (–)**: Shorter dash, typically used for ranges (2019–2023)
-
-By default, the extension only transforms em-dashes. You can enable en-dash transformation in settings.
-
-## License
-
-MIT License - Feel free to use, modify, and distribute this extension.
-
-## Contributing
-
-Contributions are welcome! If you'd like to contribute:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly using the provided test files
-5. Submit a pull request with a clear description
-
-Please ensure your code:
-- Follows the existing code style
-- Includes appropriate comments
-- Passes all existing tests
-- Maintains privacy and security standards
-
-## Support
-
-For issues, questions, or feature requests:
-- Check the [Troubleshooting](#troubleshooting) section above
-- Review the [Testing Guide](TESTING_GUIDE.md) for common issues
-- Open an issue on the project repository with:
-  - Chrome version
-  - Extension version
-  - Steps to reproduce the issue
-  - Expected vs actual behavior
-
----
-
-**Version**: 1.0.0  
-**Last Updated**: November 2025
